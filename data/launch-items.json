@@ -1,0 +1,14 @@
+[
+    {
+      "id": "vscode",
+      "name": "Visual Studio Code",
+      "type": "program",
+      "path": "E:\\Microsoft_VS_Code\\Code.exe"
+    },
+    {
+      "id": "projects-folder",
+      "name": "Projects Folder",
+      "type": "folder",
+      "path": "F:\\dev"
+    }
+  ]

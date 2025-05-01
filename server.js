@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
 import { launchRoutes } from "./routes/launchRoutes.js";
-import { projectRoutes } from "./routes/projectRoutes.js";
-
+import { launchItemRoutes } from "./routes/launchItemRoutes.js";
+import { noteRouter } from "./routes/noteRoutes.js";
 const PORT = 3001;
 const app = express();
 
@@ -14,8 +14,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/launch", launchRoutes);
-app.use("/project", projectRoutes);
-
+app.use("/launch-items", launchItemRoutes);
+app.use("/notes", noteRouter);
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
