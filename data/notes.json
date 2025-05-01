@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "id": 1746100144890,
+    "title": "Test Note 2",
+    "content": "This is another test note content that I just added",
+    "createdAt": "2025-05-01T11:49:04.890Z"
+  }
+]
