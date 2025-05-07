@@ -53,7 +53,7 @@ export const updateNote = (req, res) => {
 }
 
 export const deleteNote = (req, res) => {
-    const { id } = req.params;
+    const id = Number(req.params.id);
     const notes = readNotes();
     const noteId = parseInt(id, 10);
     
