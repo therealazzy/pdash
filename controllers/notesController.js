@@ -55,12 +55,18 @@ export const updateNote = (req, res) => {
 export const deleteNote = (req, res) => {
     const { id } = req.params;
     const notes = readNotes();
-    const filteredNotes = notes.filter(note => note.id !== id);
+    const noteId = parseInt(id, 10);
+    
+    if (isNaN(noteId)) {
+        return res.status(400).json({ error: 'Invalid note ID' });
+    }
+
+    const filteredNotes = notes.filter(note => note.id !== noteId);
 
     if(filteredNotes.length === notes.length){
         return res.status(404).json({ error: 'Note not found' });
     }
 
     writeNotes(filteredNotes);
-    res.json({ message: 'Note deleted' });
+    res.json({ message: 'Note deleted successfully' });
 }
